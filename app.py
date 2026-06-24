@@ -38,6 +38,13 @@ if name:
         st.subheader("Geography-wise churn visualization")
         seg=['Geography']
         seg_churn_rate(df,seg)
+        segments=['CreditScore','Gender','Age','Tenure', 'Balance', 'NumOfProducts','HasCrCard',
+                 'IsActiveMember','EstimatedSalary']
+        seg_1='Geography'
+        seg_2=st.selectbox("Geographic Risk Group By", segments)
+        fig=age_tenure_heatmap(df,seg_1,seg_2)
+        st.pyplot(fig)
+        plt.close(fig)
 
     with tab4:    
         #Age & tenure churn comparison
@@ -79,7 +86,7 @@ if name:
             col1, col2, col3,col4= st.columns(4)
             col1.metric("Overall Churn Rate",f"{kpi["ocr"]}%")
             col2.metric("Segment Churn Rate",f"{kpi["scr"]}%")
-            col3.metric("High-Value Churn Ratio",f"{kpi["hvcr"]}%")
+            col3.metric("High-Value Churn Rate",f"{kpi["hvcr"]}%")
             with col4:
                 hv_gb = st.selectbox("High-Value Group By", li)
                 high_val_df=high_val_groupby(df,a,sub_cate,hv_gb)
