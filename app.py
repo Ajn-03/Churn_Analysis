@@ -2,10 +2,6 @@ import streamlit as st
 import matplotlib.pyplot as plt
 import pandas as pd
 from Churn_Analysis import churn_summary,seg_churn_rate,age_tenure_heatmap,high_val_groupby,dynamic_kpi
-st.set_page_config(
-    page_title="Churn Analysis",
-    layout="wide"
-)
 
 st.title("Churn Analysis")
 name=st.text_input("Enter Your Name")
