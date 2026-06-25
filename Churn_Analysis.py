@@ -172,6 +172,7 @@ for i in col:
 df1
 
 #Total no. of churned and retained customers
+
 churned = (df1['Exited'] == 1).sum()
 retained=(df1['Exited'] == 0).sum()
 print(churned)
