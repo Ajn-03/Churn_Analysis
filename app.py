@@ -6,21 +6,6 @@ st.set_page_config(
     page_title="Churn Analysis",
     layout="wide"
 )
-st.markdown("""
-<style>
-div[data-testid="stMetricValue"] {
-    font-size: 2.2rem !important;
-}
-
-div[data-testid="stMetricLabel"] {
-    font-size: 20px !important;
-}
-            
-button[data-baseweb="tab"] {
-    font-size: 20px !important;
-}
-</style>
-""", unsafe_allow_html=True)
 
 st.title("Churn Analysis")
 name=st.text_input("Enter Your Name")

@@ -130,8 +130,9 @@ def seg_churn_rate(df1, segments):
             color=['pink', 'skyblue', 'yellow', 'lightgreen'],
             figsize=(3,3)
         )
-        plt.title(f'Churn Rate (%) per {i} Segment')
-        plt.ylabel('Churn Rate (%)')
+        plt.title(f'Churn Rate (%) per {i} Segment',fontsize=8)
+        plt.xticks(fontsize=8)
+        plt.ylabel('Churn Rate (%)',fontsize=8)
         st.pyplot(plt.gcf())   # instead of plt.show()
         plt.clf()
         plt.close()# clears figure before next loop
@@ -171,6 +172,7 @@ for i in col:
 df1
 
 #Total no. of churned and retained customers
+
 churned = (df1['Exited'] == 1).sum()
 retained=(df1['Exited'] == 0).sum()
 print(churned)
@@ -282,7 +284,7 @@ def age_tenure_heatmap(df1,seg_1,seg_2):
            .pivot(index=seg_1, columns=seg_2, values='Exited')
     )
 
-    fig, ax = plt.subplots(figsize=(8, 5))
+    fig, ax = plt.subplots(figsize=(6,3))
 
     sns.heatmap(
         age_tenure,
@@ -292,8 +294,8 @@ def age_tenure_heatmap(df1,seg_1,seg_2):
         ax=ax
     )
 
-    ax.set_xlabel(seg_2)
-    ax.set_ylabel(seg_1)
+    ax.set_xlabel(seg_2,fontsize=8)
+    ax.set_ylabel(seg_1,fontsize=8)
     plt.close()
     return fig
 
