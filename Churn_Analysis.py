@@ -130,9 +130,8 @@ def seg_churn_rate(df1, segments):
             color=['pink', 'skyblue', 'yellow', 'lightgreen'],
             figsize=(3,3)
         )
-        plt.title(f'Churn Rate (%) per {i} Segment',fontsize=8)
-        plt.xticks(fontsize=8)
-        plt.ylabel('Churn Rate (%)',fontsize=8)
+        plt.title(f'Churn Rate (%) per {i} Segment')
+        plt.ylabel('Churn Rate (%)')
         st.pyplot(plt.gcf())   # instead of plt.show()
         plt.clf()
         plt.close()# clears figure before next loop
