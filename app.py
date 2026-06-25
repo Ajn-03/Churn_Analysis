@@ -13,7 +13,11 @@ div[data-testid="stMetricValue"] {
 }
 
 div[data-testid="stMetricLabel"] {
-    font-size: 1rem !important;
+    font-size: 20px !important;
+}
+            
+button[data-baseweb="tab"] {
+    font-size: 20px !important;
 }
 </style>
 """, unsafe_allow_html=True)
