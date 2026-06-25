@@ -3,11 +3,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from Churn_Analysis import churn_summary,seg_churn_rate,age_tenure_heatmap,high_val_groupby,dynamic_kpi
 
-st.set_page_config(
-    page_title="Churn Analysis",
-    layout="wide"
-)
-
 st.title("Churn Analysis")
 name=st.text_input("Enter Your Name")
 
@@ -65,7 +60,7 @@ if name:
         # High-value customer churn explorer
         st.subheader("High-value customer churn explorer")
         high_bal = pd.read_csv("High_Bal.csv")
-        st.dataframe(high_bal)
+        st.dataframe(high_bal,hide_index=True)
 
     with tab2:
         #Dynamic KPI updates
