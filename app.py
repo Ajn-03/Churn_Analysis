@@ -23,7 +23,6 @@ if name:
         "High Value",
         "Segment Analysis & Comparison"
     ])
-
     #Read Database
     df = pd.read_csv("New_European_Bank.csv")
 
