@@ -6,6 +6,18 @@ st.set_page_config(
     page_title="Churn Analysis",
     layout="wide"
 )
+st.markdown("""
+<style>
+div[data-testid="stMetricValue"] {
+    font-size: 2.2rem !important;
+}
+
+div[data-testid="stMetricLabel"] {
+    font-size: 1rem !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("Churn Analysis")
 name=st.text_input("Enter Your Name")
 
@@ -35,7 +47,7 @@ if name:
         col4.metric("Retained Customers", summary["Retained Customers"])
         col5.metric("Retention Rate", f"{summary['Overall Retention Rate']}%")
         churn_df = pd.read_csv("churn_summary.csv")
-        st.dataframe(churn_df)
+        st.dataframe(churn_df,use_container_width=True,hide_index=True)
     
     with tab3:
         #Geography churn visualization
