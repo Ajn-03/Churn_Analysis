@@ -1,0 +1,10 @@
+Segment,Highest Churn Rate,Highest Churn Contributor,Highest Retain Rate Per Segment,Highest Retained Contributor
+CreditScore,Low,Medium,High,High
+Geography,Germany,Germany,Spain,Spain
+Gender,Female,Female,Male,Male
+Age,46-60,30-45,<30,60+
+Tenure,Mid-Term,Long-Term,New,Mid-Term
+NumOfProducts,One,One,Multiple,Multiple
+HasCrCard,No,Yes,Yes,No
+IsActiveMember,No,No,Yes,Yes
+EstimatedSalary,Low,Mid,Mid,High
